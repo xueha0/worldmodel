@@ -36,8 +36,12 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material mkdocs-bibtex pymdown-extensions pypandoc
 
       # 如果你的 docs 不在默认目录，记得在 mkdocs.yml 里设置 docs_dir
       - name: Deploy with gh-deploy
         run: mkdocs gh-deploy --force
+
+      - name: Install Pandoc (for CSL numeric styles)
+        run: |
+          conda install Pandoc
