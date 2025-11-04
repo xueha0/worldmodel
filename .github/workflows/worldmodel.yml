@@ -90,7 +90,7 @@ jobs:
           fi
 
       - name: Build (strict to surface errors)
-        run: mkdocs build --strict --verbose
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force

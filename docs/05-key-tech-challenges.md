@@ -133,5 +133,16 @@
 &emsp;&emsp;4) 3D robotics world predicting  
 &emsp;&emsp;General-purpose video generation models neglect the substantial gap between their representation space and the three-dimensional, temporally interconnected robotics environment, thereby hindering accurate action policy prediction. For example, Wen et al. [@wen2024vidman] focuses on 2D image prediction before action generation. To handle this, Huang et al. [@huang2025enerverse] propose Free Anchor Views (FAVs), a multi-view video representation offering flexible, task-adaptive perspectives to address challenges like motion ambiguity and environmental constraints. 
 
+&emsp;&emsp;5) Fine-grained robot-object interaction  
+&emsp;&emsp;Robots are expected to perform precise manipulation, which requires world models to support fine-grained robot-object interactions. To achieve this, Zhu et al. [@zhu2025irasim] design a novel frame-level action-conditioning module to achieve precise action-frame alignment. He et al. [@he2025pre] adopt two different pre-trained video generative models as the base models, introduces a minimalist yet powerful add-on action-conditioned module that improves frame-level action awareness while maintaining architectural flexibility.
+
+&emsp;&emsp;6) Multi-agent operation  
+&emsp;&emsp;Certain tasks necessitate coordinated operation among multiple robots to achieve successful completion. To this end, Zhang et al. [@zhang2025combo] factorize the joint actions of different agents as a set of text prompt and leverage composable video diffusion models to learn world dynamics and make predictions. An agent-dependent loss is imposed to let the model focus on the related pixel, where the loss coefficient matrix is based on each agent’s reachable region reachable region.
+
+&emsp;&emsp;7) Reasoning  
+&emsp;&emsp;Zhou et al. [@zhang2025dreamvla] enhance the reasoning and genrealization ability by incorporating context information and predicting dynamic regions, depth map, semantic knowledge by means of foundation models, e.g., DINOv2 [@oquab2024dinov2] and SAM [@kirillov2023segment]. Ye et al. [@Ye2025GigaBrain] introduce an Embodied Chain-of-Thought (CoT) as an intermediate reasoning representation, enabling more structured and interpretable decision-making in embodied tasks. Ye et al. [@Ye2025GigaBrain;@zhao2025cot] generates a sub-goal image that represents the robot’s planned state in pixel space, and then conditions its action on both the current observation and the generated subgoal image.
+
+&emsp;&emsp;8) Error propagation  
+&emsp;&emsp;Cen et al. [@cen2025worldvla] indicate that generating multiple actions in sequence leads to performance drop in autoregressive models. The primary reason for this is that pretrained multimodal language models have predominantly been exposed to images and text rather than actions, resulting in limited action generalization capabilities. In autoregressive models where subsequent actions are conditioned on preceding ones, error propagation becomes a critical issue, as the earlier incorrect predictions influence subsequent actions over time. To handle this, Cen et al. [@cen2025worldvla] propose an attention mask strategy that selectively masks prior actions during the generation of the current action. It enables both future imagination and action generation. 
 ## References
 \bibliography
