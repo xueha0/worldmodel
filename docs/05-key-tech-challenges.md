@@ -7,10 +7,10 @@
 &emsp;&emsp;World models require large amounts of data and supervision to learn generalizable representations of world dynamics and support diverse tasks. However, collecting real-world robotic data is labor-intensive and costly, and the available data are often heterogeneous in format and modality. To overcome these limitations, a variety of strategies have been proposed.
 
 &emsp;&emsp;1) Training Data Scarcity  
-&emsp;&emsp;&emsp;a) Leveraging Pre-trained Models.  
+&emsp;&emsp;&emsp;a) Leveraging Pre-trained Models  
 &emsp;&emsp;Given the limited availability of training data, many approaches leverage existing pre-trained models. For example, Xiang et al.[@xiang2024pandora] bypass the need for training from scratch by integrating a pre-trained LLM and a pre-trained video model, requiring only lightweight fine-tuning. Zhu et al. [@zhu2025irasim] initialize IRASim with the pre-trained weights of OpenSora [@zheng2024open] to expedite training. Similarly, Sudhakar et al. [@sudhakar2024controlling] leverage a pre-trained diffusion model, while Wang et al. [@wang2025language] utilize Stable Video Diffusion, fine-tuned with robotic videos to adapt to the robotics domain. Song et al. [@song2025physical] further exploit the world knowledge embedded in pre-trained autoregressive video generation models such as NOVA [@deng2025autoregressive].
 
-&emsp;&emsp;&emsp;b) Incorporating Auxiliary Data Sources.  
+&emsp;&emsp;&emsp;b) Incorporating Auxiliary Data Sources  
 &emsp;&emsp;Some works tackle the shortage of robot data by using other available sources, such as human manipulation datasets. For instance, Zhi et al. [@zhi20253dflowaction] use both human and robot manipulation videos for training. However, these datasets often contain cluttered backgrounds and similar-looking objects. To address this, they apply optical flow constraints to make the learned representation embodiment-agnostic. Sudhakar et al. [@sudhakar2024controlling] leverage an automatic hand segmentation method to obtain agent-agnostic data for robot learning. Others resort to more diverse data. For example, Yang et al. [@yang2023learning] leverage diverse kinds of data, including objects, scenes, actions, motions, language, and motor control, and convert all actions into a common format.
 
 &emsp;&emsp;&emsp;c) Synthetic Data Generation  
@@ -144,5 +144,6 @@
 
 &emsp;&emsp;8) Error propagation  
 &emsp;&emsp;Cen et al. [@cen2025worldvla] indicate that generating multiple actions in sequence leads to performance drop in autoregressive models. The primary reason for this is that pretrained multimodal language models have predominantly been exposed to images and text rather than actions, resulting in limited action generalization capabilities. In autoregressive models where subsequent actions are conditioned on preceding ones, error propagation becomes a critical issue, as the earlier incorrect predictions influence subsequent actions over time. To handle this, Cen et al. [@cen2025worldvla] propose an attention mask strategy that selectively masks prior actions during the generation of the current action. It enables both future imagination and action generation. 
+
 ## References
 \bibliography

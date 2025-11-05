@@ -27,3 +27,6 @@
 **12) Memory.**It enables world models to store and recall past experiences, ensuring temporal consistency and coherent predictions. In addition, world models should be able to access and integrate external information, thereby supporting richer reasoning, long-term planning, and adaptability—analogous to the role of retrieval-augmented generation (RAG) in language models. 
 
 **13) Collaboration Ability.** World models should support both inter-agent and intra-agent coordination by reasoning about the behaviors, goals, and intentions of others and managing cooperation among multiple effectors (e.g., multi-arm systems).
+
+## References
+\bibliography
