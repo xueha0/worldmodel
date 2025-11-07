@@ -2,6 +2,7 @@
 hide:
   - navigation   # 隐藏左侧主导航
   - toc          # 隐藏目录（如果你启用了 toc.integrate，它本来也在左侧）
+  - footer
 ---
 
 <!-- 首页 Hero -->

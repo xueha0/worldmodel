@@ -1,3 +1,9 @@
+---
+hide:
+  - footer
+---
+
+
 # **References**
 
 ## **Decision Support**

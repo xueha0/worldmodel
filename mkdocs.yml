@@ -1,13 +1,13 @@
 site_name: "A Step Toward World Models: A Survey on Robotic Manipulation"
 site_url: https://your-domain.example  # 可选：用于 SEO/社交卡片
 # repo_url: https://github.com/xueha0/worldmodel # 可选：右上角 GitHub 按钮
-edit_uri: edit/main/docs/              # 可选：页面“编辑此页”按钮
+# edit_uri: edit/main/docs/              # 可选：页面“编辑此页”按钮
 
 theme:
   name: material
   language: en
   logo: assets/img/logo.png         # 放你的 logo（可用占位）
-  favicon: assets/favicon.png   # 站点小图标
+  favicon: assets/img/badge.png   # 站点小图标
   font:
     text: Inter
     code: JetBrains Mono
@@ -35,6 +35,7 @@ theme:
     - search.highlight
     - content.code.copy         # 代码复制
     - header.autohide
+    - navigation.footer  
 
 plugins:
   - search:
