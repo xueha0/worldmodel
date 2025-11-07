@@ -76,17 +76,17 @@ extra_javascript:
   - js/katex-init.js
   - js/strip-nocase.js
 
-extra:
-  social:
-    - icon: material/github
-      link: https://github.com/your
-      name: GitHub
-    - icon: material/google
-      link: https://scholar.google.com/citations?user=XXXXX
-      name: Google Scholar
-    - icon: material/email
-      link: mailto:your.name@example.com
-      name: Email
+# extra:
+#   social:
+#     - icon: material/github
+#       link: https://github.com/your
+#       name: GitHub
+#     - icon: material/google
+#       link: https://scholar.google.com/citations?user=XXXXX
+#       name: Google Scholar
+#     - icon: material/email
+#       link: mailto:your.name@example.com
+#       name: Email
 
 nav:
   - Home: index.md
